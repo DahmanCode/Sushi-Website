@@ -108,8 +108,14 @@ a {
 }
 
 @media screen and (max-width: 900px) {
-  .header__nav {
+  /* .header__nav {
     background: var(--primary-color);
+    opacity: .8;
+  } */
+
+  .header__logo {
+    width: 100%;
+    flex: auto;
   }
 
   .header__menu {
@@ -117,6 +123,7 @@ a {
   }
 
   .header__menu-mobile {
+    background-color: var(--primary-color);
     display: flex;
   }
 }

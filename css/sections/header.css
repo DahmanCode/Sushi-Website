@@ -1,10 +1,8 @@
 .header__nav {
   display: flex;
-  /* overflow-x: hidden; */
-  position: fixed;
+  overflow: hidden;
   width: 100%;
   z-index: 99;
-  box-shadow: 20px 0px 50px 20px #6b646480;
 }
 
 .header__logo {
@@ -21,7 +19,6 @@
   width: 100%;
   background-color: var(--primary-color);
   z-index: -1;
-  opacity: .8;
 }
 
 .header__logo h4 {
@@ -47,16 +44,8 @@
   
 }
 
-.header__menu-overlay {
-  z-index: -1;
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  background-color: var(--color-creamson);
-  opacity: .8;
-}
-
 .header__menu li {
+  position: relative;
   font-weight: 500;
   font-family: var(--plus-jakarta-sans);
   color: var(--secondary-color);
@@ -64,6 +53,21 @@
   text-transform: uppercase;
   line-height: 20px;
   cursor: pointer;
+}
+
+.header__menu li a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--primary-color);
+  transition: all .3s ease;
+}
+
+.header__menu li:hover a::after {
+  width: 100%;
 }
 
 .header__menu li img {

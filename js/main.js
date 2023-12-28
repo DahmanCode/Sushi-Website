@@ -1,3 +1,5 @@
+// var menu = document.getElementById('menu')
+
 const cards = document.querySelectorAll('.popular-foods__card')
 
 cards.forEach((card) => {
