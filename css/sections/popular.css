@@ -104,6 +104,13 @@
   border-radius: 36px;
   background-color: rgba(255, 255, 255, .05);
   border: 1px solid rgba(255, 255, 255, .02);
+  transition: all .5s ease;
+  cursor: pointer;
+}
+
+.popular-foods__card:hover {
+  transform: translateY(-20px);
+  transition: all .5s ease;
 }
 
 .popular-foods__card-img {

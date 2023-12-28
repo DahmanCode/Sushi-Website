@@ -1,12 +1,16 @@
 .header__nav {
   display: flex;
-  overflow: hidden;
+  /* overflow-x: hidden; */
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  box-shadow: 20px 0px 50px 20px #6b646480;
 }
 
 .header__logo {
   flex: 1;
   display: flex;
-
+  
   position: relative;
   padding: 20px;
 }
@@ -17,6 +21,7 @@
   width: 100%;
   background-color: var(--primary-color);
   z-index: -1;
+  opacity: .8;
 }
 
 .header__logo h4 {
@@ -29,15 +34,26 @@
   opacity: 0.8;
 }
 
-.header__menu, .header__menu-mobile {
+.header__menu, 
+.header__menu-mobile {
+  position: relative;
   padding: 20px;
   flex: 1.236;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 64px;
-
   list-style: none;
+  
+}
+
+.header__menu-overlay {
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  background-color: var(--color-creamson);
+  opacity: .8;
 }
 
 .header__menu li {
