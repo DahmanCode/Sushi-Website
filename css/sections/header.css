@@ -8,9 +8,17 @@
 .header__logo {
   flex: 1;
   display: flex;
-  
+  align-items: center;
+  justify-content: start;
   position: relative;
   padding: 20px;
+}
+
+.header__logo img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  margin-left: 10px;
 }
 
 .header__logo-overlay {
@@ -22,8 +30,8 @@
 }
 
 .header__logo h4 {
-  padding-left: 30px;
   font-weight: 700;
+  padding-left: 10px;
   font-size: 24px;
   text-transform: uppercase;
   font-family: var(--playfair-display);
@@ -74,7 +82,14 @@
   width: 24px;
   height: 24px;
   object-fit: contain;
+  cursor: pointer;
+  z-index: 99;
 }
+
+.header__menu .close {
+  display: none;
+}
+
 
 .header__menu-mobile {
   display: none;
